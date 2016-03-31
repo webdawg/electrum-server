@@ -119,7 +119,7 @@ class BlockchainProcessor(Processor):
         self.time_ref = time.time()
 
     def print_time(self, num_tx):
-        delta = time.time() - self.time_ref
+        delta = time.time() - self.time_ref + 0000000000.000001
         # leaky averages
         seconds_per_block, tx_per_second, n = self.avg_time
         alpha = (1. + 0.01 * n)/(n+1)
